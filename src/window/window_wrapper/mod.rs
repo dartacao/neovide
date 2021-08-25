@@ -259,8 +259,8 @@ pub fn create_window(
         .with_stencil_buffer(8)
         .with_gl_profile(GlProfile::Core)
         .with_vsync(false)
-        .with_srgb(false)
-        .with_hardware_acceleration(None)
+        .with_srgb(true)
+        //.with_hardware_acceleration(None)
         .build_windowed(winit_window_builder, &event_loop)
         .unwrap();
     let windowed_context = unsafe { windowed_context.make_current().unwrap() };
